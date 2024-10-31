@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body{
+background-color: rgb(5, 3, 50);
+}
+form{
+height: 1200px;
+width: 480px;
+border: 1px solid blue;
+padding-left: 20px;
+border-radius: 10px;
+margin: auto;
+background-color: darksalmon;
+}
+.property{
+height: 100px;
+width: 430px;
+background-color:white;
+border: 1px solid blue;
+margin:10px;
+padding-top: 10px;
+padding-left: 5px;
+border-radius: 7px;
+}
+input{
+width:400px ;
+height: 30px;
+margin-bottom: 20px;
+margin-top: 25px;
+border-radius: 7px;
+padding-left: 10px;
+border-left: none;
+border-right: none;
+border-top: none;
+border-bottom: 1px dotted black;
+color: blue;
+}
+input[type="radio"]{
+width: 20px;
+height: 15px;
+margin-bottom: 8px;
+margin-top: 5px;
+}
+input[type="submit"]{
+background-color: brown;
+color: white;
+}
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo galxay</title>
+</head>
+<body>
+<form name="myform">
+<h1>Register Now in our esc website</h1>
+<div class="property">
+<label for="name">Firstname:</label><br>
+<input type="text" name="firstname" required placeholder="Leo">
+</div>
+<div class="property">
+<label for="name">Middlename:</label><br>
+<input type="text" name="firstname" required placeholder="Doe">
+</div><p id="demo"></p>
+<div class="property">
+<label for="name">Lastname:</label><br>
+<input type="text" name="firstname" required placeholder="Chandu">
+</div>
+<div class="property">
+    <label for="name">Email:</label><br>
+    <input type="email" name="firstname" required placeholder="lnn..dso@gmail.com">
+</div>
+<div class="property">
+    <label for="name">Phone:</label><br>
+    <input type="tel" name="firstname"  pattern="[0-9]" placeholder="07544xxxxxxx" required>
+</div>
+<div class="property">
+    <label for="name">Gender:</label><br>
+    <input type="radio" name="firstname" required>Female<br>
+    <input type="radio" name="firstname" required>Male<br>
+    <input type="radio" name="firstname" required>Other<br>
+</div>
+<div class="property">
+    <label for="name">Upload your CV:</label><br>
+    <input type="file" name="firstname" required placeholder="Chandu">
+    </div>
+<div class="property">
+    <input type="submit" onclick="submitor()" name="firstname" value="submit."><br>
+    <p id="demo"></p>
+</div>
+</form>
+<script>
+function submitor(){
+var x=document.forms["myform"]["firstname"].value;
+var text="";
+if(x==""){
+text="please input cant'nt be blank";
+document.getElementById("demo").innerHTML=text;
+document.getElementById("demo").style.color="red";
+document.getElementById("demo").style.height="50px";
+document.getElementById("demo").style.backgroundColor="blue";
+document.getElementById("demo").style.paddingTop="30px";
+}else{
+alert("Your Succesfully create your Account");
+}
+}
+function open(){
+window.location.open();
+}
+</script>
+</body>
+</html>
